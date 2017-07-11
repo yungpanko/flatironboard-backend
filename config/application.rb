@@ -14,8 +14,8 @@ module Flatironboard
     config.load_defaults 5.1
 
     config.action_dispatch.default_headers = {
+      'Access-Control-Allow-Origin' => 'http://localhost:8000',
         'Access-Control-Allow-Origin' => 'http://localhost:8080',
-        'Access-Control-Allow-Origin' => 'http://localhost:8000',
         'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
       }
 
