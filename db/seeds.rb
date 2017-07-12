@@ -12,21 +12,30 @@ cookies = Submission.new(title: 'Cookie recipe', description: 'how to bake cooki
 
 nyt = Submission.new(title: 'When Will Electric Cars Go Mainstream?', description: 'It May Be Sooner Than You Think', body: 'As the world’s automakers place larger bets on electric vehicle technology, many industry analysts are debating a key question: How quickly can plug-in cars become mainstream? The conventional view holds that electric cars will remain a niche product for many years, plagued by high sticker prices and heavily dependent on government subsidies...', user: 'sarah', src_url: 'https://static01.nyt.com/images/2017/07/08/science/08ELECTRIC-cars/08ELECTRIC-cars-master768.jpg', link_url: 'https://www.nytimes.com/2017/07/08/climate/electric-cars-batteries.html?rref=collection%2Fsectioncollection%2Fpersonaltech')
 
+color = Submission.new(title: 'Add color to your Living Room', description: 'Decorate your living room with color. Step outside the box and add a burst of color to your space, or try a whole new color scheme.', body: 'Balance bright colors with strong neutrals for a look thats colorful but livable. Accents of peppy pink, lime green, and yellow are sprinkled over a foundation of assertive neutrals -- on the brown chair, gray sofa, dark wood floors, and black lighting.', user: 'sarah', src_url: 'http://images.meredith.com/content/dam/bhg/Images/2014/7/28/102181817.jpg.rendition.largest.jpg' , link_url: 'http://www.bhg.com/rooms/living-room/family/real-life-colorful-living-rooms/?socsrc=bhgpin092514simplicityiskey&page=4&crlt.pid=camp.c8chqBWwPAUn')
+
 
 blog = Category.create(name: 'blog')
 recipes = Category.create(name: 'recipes')
 news = Category.create(name: 'news')
+decor = Category.create(name: 'decor')
 
 text = ContentType.create(name: 'text')
 article_link = ContentType.create(name: 'article_link')
 
+
 first_post.category = blog
 cookies.category = recipes
 nyt.category = news
+color.category = decor
+
+
 first_post.content_type = text
 cookies.content_type = text
 nyt.content_type = article_link
+color.content_type = article_link
 
 first_post.save
 cookies.save
 nyt.save
+color.save
