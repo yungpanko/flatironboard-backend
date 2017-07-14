@@ -41,6 +41,8 @@ module Api
         @submission.title = submission_params[:title]
         @submission.body = submission_params[:body]
         @submission.description = submission_params[:description]
+        @submission.src_url = submission_params[:src_url]
+        @submission.link_url = submission_params[:link_url]
         @submission.category = category
         @submission.content_type = content_type
         @submission.save
@@ -50,7 +52,7 @@ module Api
       private
 
       def submission_params
-        params.require(:submission).permit(:title, :body, :description, :category_id, :content_type_id, :likes, :id)
+        params.require(:submission).permit(:title, :body, :description, :src_url, :link_url, :category_id, :content_type_id, :likes, :id)
       end
 
 
