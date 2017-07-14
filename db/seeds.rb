@@ -106,7 +106,18 @@ stress = Submission.new(title: 'I\'M SO TIRED', description: 'When Stress Makes 
 skimm = Submission.new(title: 'Who Are theSkimms?', description: 'Two friends in our 20s, who hail from New York and Chicago.', body: 'Our startup romance is one for the books -- we met on a rainy day in Rome while we were both studying abroad in college. We bonded over a mutual love of fried artichokes. What we didn\'t know as we struggled to order in Italian, was that we\'d reconnect years later working in our own country\'s capital. By that point, we had become professional storytellers, as producers for NBC News -- working in breaking news, political news, and documentaries. We clicked as colleagues, as friends, and as roommates, and it didn\'t take long for theSkimm to take off from our living room couch. <br> News is not only our career, it\'s our passion. Because of this, we have always been the go-to source for friends seeking the scoop on current events or breaking news. We soon realized three things: Reading the news is time consuming; Wanting to read the news is a hobby; lastly, not everyone has the time or interest.<br>theSkimm solves all that and makes it easier to be smarter. In our spare time (which is rare) we can be found spooking each other with "Law & Order: SVU" marathons and trying to scheme our way into a free Equinox membership. <br>For two girls who grew up more "Morning Glory" than "The Social Network," it took a lot of guts, and white wine, for us to make theSkimm a reality. <br>Thank you for being a part of theSkimm Life. Get ready, we’re changing things. <br> <br> -theSkimms', user: 'sarah', src_url: 'https://cdn-images-1.medium.com/max/596/1*y--JK-JRdSF_CSex6-f3qg.png', link_url: 'http://www.theskimm.com/about')
 
 ed = Submission.new(title: 'Ed Sheeran - Lego House (Acoustic Boat Sessions)', description: 'Ed plays an acoustic version of \'Lego House\'... on a boat! ', body: 'See the official music video for Lego House: http://youtu.be/c4BLVznuWnU
-', user: 'sarah', src_url: 'https://www.youtube.com/embed/ZlGPTwNRYtU?list=RDxADSSBs34is', link_url: 'https://www.youtube.com/watch?v=ZlGPTwNRYtU&list=RDxADSSBs34is&index=3')
+', user: 'sarah', src_url: 'http://cdn02.cdn.justjaredjr.com/wp-content/uploads/headlines/2017/06/ed-mbe.jpg', link_url: 'https://www.youtube.com/watch?v=ZlGPTwNRYtU&list=RDxADSSBs34is&index=3')
+
+
+dmfsu = Submission.new(title: 'Dance Marathon at Florida State University', description: '
+Dance Marathon at Florida State University holds an annual 40-hour event where more than 1,800 students stay awake and on their feet to raise money and awareness for our local beneficiaries.', body: 'Our mission is For the Kids with a commitment to raising funds for children in need of specialized pediatric and medical care that otherwise are not available to them locally. Dance Marathon at FSU, the largest student-run philanthropy in the southeastern region of the United States, benefits our local Children’s Miracle Network hospital, Shands Children\'s Hospital, and the FSU College of Medicine\'s Pediatric Outreach Programs. We are one of the five founding Miracle Network Dance Marathon’s in the country!', user: 'sarah', src_url: 'http://dmfsu.org/images/total2017.jpg', link_url: 'http://dmfsu.org/')
+
+semantic = Submission.new(title: 'Semantic UI', description: 'Design Beautiful Websites Quicker', body: 'Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML.', user: 'sarah', src_url: 'https://semantic-ui.com/images/devices.png', link_url: 'https://semantic-ui.com/')
+
+flatiron = Submission.new(title: 'Flatiron School', description: 'To enable the pursuit of a better life through education.', body: 'Education used to be the best investment one could make. It can be again. It’s that shared belief that brought together a venture capitalist with a passion for education and a self-taught technologist bent on helping his students reinvent themselves as programmers. In 2012, Adam Enbar and Avi Flombaum partnered to create an alternative to an education industry leaving a wide skills gap in a booming tech world. Alongside a scrappy community of students ready for a new way to learn, they launched Flatiron School – an accelerated programming school that inspired a coding bootcamp industry. As we’ve proven that this model can work – with over 98% of students starting fulfilling careers at companies including Google, Apple, even NASA – we’ve pushed to expand accessibility to this transformative education, offering scholarships and fellowship programs for underrepresented groups in tech. In 2015, we took our classroom online with Learn.co, bringing the ability to change your career through code to those previously left out of the bootcamp model – people holding full-time jobs, parents balancing packed schedules, students hundreds of miles from the nearest tech hub. Technology has the potential to reshape the way we learn – and we’re just getting started.', user: 'sarah', src_url: 'http://blog.flatironschool.com/wp-content/uploads/2016/05/Flatiron-School-68-1024x623.jpg', link_url: 'https://flatironschool.com/')
+
+slack = Submission.new(title: 'Slack', description: 'Where work happens', body: 'Whatever work means for you, Slack brings all the pieces and
+people you need together so you can actually get things done.', user: 'sarah', src_url: 'https://a.slack-edge.com/f3494/img/uk/tools@2x.png', link_url: 'https://slack.com/')
 
 # new_sub = Submission.new(title: '', description: '', body: '', user: '', src_url: '', link_url: '')
 
@@ -137,7 +148,10 @@ art.category = news
 stress.category = health
 skimm.category = news
 ed.category = music
-
+dmfsu.category = health
+semantic.category = news
+flatiron.category = news
+slack.category = news
 
 first_post.content_type = text
 cookies.content_type = text
@@ -152,7 +166,10 @@ art.content_type = article_link
 stress.content_type = article_link
 skimm.content_type = article_link
 ed.content_type = video_link
-
+dmfsu.content_type = article_link
+semantic.content_type = article_link
+flatiron.content_type = article_link
+slack.content_type = article_link
 
 first_post.save
 cookies.save
@@ -167,3 +184,7 @@ art.save
 stress.save
 skimm.save
 ed.save
+dmfsu.save
+semantic.save
+flatiron.save
+slack.save
