@@ -103,17 +103,25 @@ art = Submission.new(title: 'Colorful Watercolor Paintings of Radiant Trees in N
 
 stress = Submission.new(title: 'I\'M SO TIRED', description: 'When Stress Makes You Fall Asleep', body: 'Stephen, a 32-year-old travel agent in New York, says it happens to him all the time. There are times, particularly when I have something really big going on, when I\'ll become so incapacitated knowing I have a million different things to do that my body ends up saying, You know what? Let\'s just sleep, he tells me. I\'ll go and lie down and pretend that the rest of the world doesn\'t exist. I just started calling them my fear naps. A few years ago, I had a Twitter conversation with someone who, like me, was afraid of flying. Unlike me, however, this persons response to flight anxiety was to fall asleep before takeoff, and stay asleep until the plane had landed. As someone who\'s spent many flights desperately clutching the armrests as if the force of my grip alone might keep the airplane aloft, this didn\'t make much sense to me. (Nor did it seem particularly fair.) Why, if you were afraid for your life, or even just fairly stressed about it, would your body respond by falling asleep? As far as I knew, human beings react to the threat of danger with one of two possible responses: fight or flight. One or the other might be a smarter choice, depending on the situation at hand, but both options make sense as reflexive means of survival. But how could falling asleep help anyone?', user: 'sarah', src_url: 'https://pixel.nymag.com/imgs/daily/science/2017/07/10/10-fear-nap.w710.h473.2x.jpg', link_url: 'http://nymag.com/scienceofus/2017/07/when-stress-makes-you-fall-asleep.html')
 
+skimm = Submission.new(title: 'Who Are theSkimms?', description: 'Two friends in our 20s, who hail from New York and Chicago.', body: 'Our startup romance is one for the books -- we met on a rainy day in Rome while we were both studying abroad in college. We bonded over a mutual love of fried artichokes. What we didn\'t know as we struggled to order in Italian, was that we\'d reconnect years later working in our own country\'s capital. By that point, we had become professional storytellers, as producers for NBC News -- working in breaking news, political news, and documentaries. We clicked as colleagues, as friends, and as roommates, and it didn\'t take long for theSkimm to take off from our living room couch. <br> News is not only our career, it\'s our passion. Because of this, we have always been the go-to source for friends seeking the scoop on current events or breaking news. We soon realized three things: Reading the news is time consuming; Wanting to read the news is a hobby; lastly, not everyone has the time or interest.<br>theSkimm solves all that and makes it easier to be smarter. In our spare time (which is rare) we can be found spooking each other with "Law & Order: SVU" marathons and trying to scheme our way into a free Equinox membership. <br>For two girls who grew up more "Morning Glory" than "The Social Network," it took a lot of guts, and white wine, for us to make theSkimm a reality. <br>Thank you for being a part of theSkimm Life. Get ready, we’re changing things. <br> <br> -theSkimms', user: 'sarah', src_url: 'https://cdn-images-1.medium.com/max/596/1*y--JK-JRdSF_CSex6-f3qg.png', link_url: 'http://www.theskimm.com/about')
+
+ed = Submission.new(title: 'Ed Sheeran - Lego House (Acoustic Boat Sessions)', description: 'Ed plays an acoustic version of \'Lego House\'... on a boat! ', body: 'See the official music video for Lego House: http://youtu.be/c4BLVznuWnU
+', user: 'sarah', src_url: 'https://www.youtube.com/embed/ZlGPTwNRYtU?list=RDxADSSBs34is', link_url: 'https://www.youtube.com/watch?v=ZlGPTwNRYtU&list=RDxADSSBs34is&index=3')
+
 # new_sub = Submission.new(title: '', description: '', body: '', user: '', src_url: '', link_url: '')
+
 
 blog = Category.create(name: 'blog')
 recipes = Category.create(name: 'recipes')
 news = Category.create(name: 'news')
 decor = Category.create(name: 'decor')
 health = Category.create(name: 'health')
+music = Category.create(name: 'music')
 
 
 text = ContentType.create(name: 'text')
 article_link = ContentType.create(name: 'article_link')
+video_link = ContentType.create(name: 'video_link')
 
 
 first_post.category = blog
@@ -127,6 +135,8 @@ coffee.category = health
 skewer.category = recipes
 art.category = news
 stress.category = health
+skimm.category = news
+ed.category = music
 
 
 first_post.content_type = text
@@ -140,6 +150,8 @@ coffee.content_type = article_link
 skewer.content_type = article_link
 art.content_type = article_link
 stress.content_type = article_link
+skimm.content_type = article_link
+ed.content_type = video_link
 
 
 first_post.save
@@ -153,3 +165,5 @@ coffee.save
 skewer.save
 art.save
 stress.save
+skimm.save
+ed.save

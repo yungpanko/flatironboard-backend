@@ -7,6 +7,7 @@ class CreateSubmissions < ActiveRecord::Migration[5.1]
       t.string :src_url
       t.string :link_url
       t.string :user
+      t.integer :likes, :default => 0
       t.references :category
       t.references :content_type
       t.timestamps

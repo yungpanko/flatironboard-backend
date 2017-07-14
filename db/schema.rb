@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20170711131520) do
     t.string "src_url"
     t.string "link_url"
     t.string "user"
+    t.integer "likes", default: 0
     t.bigint "category_id"
     t.bigint "content_type_id"
     t.datetime "created_at", null: false

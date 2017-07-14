@@ -18,6 +18,14 @@ module Api
         render json: Submission.find(params[:id])
       end
 
+      def update
+        @submission =  Submission.find(submission_params[:id])
+        @submission.likes += 1
+        @submission.save
+        render json: {message: "Updated submission!", status: 201}
+
+      end
+
       # def show
       #   @submission = Submission.find(params[:id])
       #   respond_to do |format|
@@ -44,7 +52,7 @@ module Api
       private
 
       def submission_params
-        params.require(:submission).permit(:title, :body, :description, :src_url, :link_url, :category_id, :content_type_id)
+        params.require(:submission).permit(:title, :body, :description, :src_url, :link_url, :category_id, :content_type_id, :likes, :id)
       end
 
 
